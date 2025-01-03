@@ -10,7 +10,7 @@ export const products: Product[] = [
     name: "Ração Premium para Bovinos",
     description: "Ração balanceada com alto teor proteico para engorda de bovinos",
     price: 89.90,
-    image: "https://images.unsplash.com/photo-1560893788-e932737f218b?auto=format&fit=crop&q=80"
+    image: "https://images.unsplash.com/photo-1665641659436-a52471e63240?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Kit Veterinário Básico",
