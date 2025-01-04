@@ -27,15 +27,15 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div 
-            className="flex items-center group cursor-pointer"
+            className="flex items-center gap-3 group cursor-pointer"
             onClick={() => navigate('/')}
           >
             <img 
               src="https://i.imgur.com/gfAW2Vk.png" 
               alt="AGROCAMPO Logo" 
-              className="h-16 md:h-20 w-auto transform transition-transform group-hover:scale-105"
+              className="h-12 md:h-14 w-auto transform transition-transform duration-300 group-hover:scale-105"
             />
-            <h1 className="font-['Impact'] text-2xl md:text-4xl font-bold italic text-black h-20 flex items-center group-hover:text-primary transition-colors ml-4">
+            <h1 className="font-['Impact'] text-2xl md:text-3xl font-bold italic text-primary group-hover:text-secondary transition-colors drop-shadow-sm">
               AgroCampo
             </h1>
           </div>
@@ -46,9 +46,11 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className="text-gray-700 hover:text-primary transition-colors duration-200 relative after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+                className="px-4 py-2 text-gray-700 hover:text-primary transition-colors duration-300 relative group"
               >
-                {item.label}
+                <span className="relative z-10">{item.label}</span>
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary group-hover:w-full group-hover:left-0 transition-all duration-300" />
+                <span className="absolute top-0 left-1/2 w-0 h-0.5 bg-primary group-hover:w-full group-hover:left-0 transition-all duration-300 delay-150" />
               </button>
             ))}
           </nav>
@@ -65,14 +67,16 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t border-gray-100">
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className="text-gray-700 hover:text-primary transition-colors duration-200 py-2"
+                  className="px-4 py-2 text-gray-700 hover:text-primary transition-colors duration-300 relative group"
                 >
-                  {item.label}
+                  <span className="relative z-10">{item.label}</span>
+                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary group-hover:w-full group-hover:left-0 transition-all duration-300" />
+                  <span className="absolute top-0 left-1/2 w-0 h-0.5 bg-primary group-hover:w-full group-hover:left-0 transition-all duration-300 delay-150" />
                 </button>
               ))}
             </div>

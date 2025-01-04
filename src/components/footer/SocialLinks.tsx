@@ -8,28 +8,28 @@ const SocialLinks = () => {
         href="https://wa.me/5589999731221"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-primary/10 p-2 rounded-full hover:bg-primary/20 transition-colors"
+        className="bg-footer-hover/10 p-2 rounded-full hover:bg-footer-hover/20 transition-colors group"
         aria-label="WhatsApp"
       >
-        <MessageCircle className="w-5 h-5 text-primary" />
+        <MessageCircle className="w-5 h-5 text-accent group-hover:text-accent/80 transition-colors" />
       </a>
       <a
         href="https://www.tiktok.com/@agrocampocorrente0"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-primary/10 p-2 rounded-full hover:bg-primary/20 transition-colors"
+        className="bg-footer-hover/10 p-2 rounded-full hover:bg-footer-hover/20 transition-colors group"
         aria-label="TikTok"
       >
-        <Video className="w-5 h-5 text-primary" />
+        <Video className="w-5 h-5 text-accent group-hover:text-accent/80 transition-colors" />
       </a>
       <a
         href="https://www.instagram.com/agrocampocorrente/"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-primary/10 p-2 rounded-full hover:bg-primary/20 transition-colors"
+        className="bg-footer-hover/10 p-2 rounded-full hover:bg-footer-hover/20 transition-colors group"
         aria-label="Instagram"
       >
-        <Instagram className="w-5 h-5 text-primary" />
+        <Instagram className="w-5 h-5 text-accent group-hover:text-accent/80 transition-colors" />
       </a>
     </div>
   );

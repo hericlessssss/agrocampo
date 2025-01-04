@@ -4,24 +4,26 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 const ContactInfo = () => {
   return (
     <div className="space-y-4">
-      <h3 className="font-poppins text-lg font-semibold text-white mb-6">Contato</h3>
+      <h3 className="font-poppins text-lg font-semibold text-footer-text mb-6">Contato</h3>
       <div className="flex items-center gap-3">
-        <MapPin className="w-5 h-5 text-primary" />
-        <p className="text-gray-300">R. do Ipiranga, 464, Corrente - PI, 64980-000</p>
+        <MapPin className="w-5 h-5 text-accent" />
+        <p className="text-footer-text/90">R. do Ipiranga, 464, Corrente - PI, 64980-000</p>
       </div>
       <div className="flex items-center gap-3">
-        <Phone className="w-5 h-5 text-primary" />
-        <a href="tel:+558935731221" className="text-gray-300 hover:text-primary">(89) 3573-1221</a>
-      </div>
-      <div className="flex items-center gap-3">
-        <Mail className="w-5 h-5 text-primary" />
-        <a href="mailto:contato@agrocampocorrente.com.br" className="text-gray-300 hover:text-primary">
-          contato@agrocampocorrente.com.br
+        <Phone className="w-5 h-5 text-accent" />
+        <a href="tel:+558935731221" className="text-footer-text/90 hover:text-footer-hover">
+          (89) 3573-1221
         </a>
       </div>
       <div className="flex items-center gap-3">
-        <Clock className="w-5 h-5 text-primary" />
-        <p className="text-gray-300">Seg - Sáb: 08:00 - 18:00</p>
+        <Mail className="w-5 h-5 text-accent" />
+        <a href="mailto:contato@agrocampocorrente.com.br" className="text-footer-text/90 hover:text-footer-hover">
+          agrocampocorrente@gmail.com
+        </a>
+      </div>
+      <div className="flex items-center gap-3">
+        <Clock className="w-5 h-5 text-accent" />
+        <p className="text-footer-text/90">Seg - Sáb: 08:00 - 18:00</p>
       </div>
     </div>
   );

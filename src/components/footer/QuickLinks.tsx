@@ -16,13 +16,13 @@ const QuickLinks = () => {
 
   return (
     <div>
-      <h3 className="font-poppins text-lg font-semibold text-white mb-6">Links Rápidos</h3>
+      <h3 className="font-poppins text-lg font-semibold text-footer-text mb-6">Links Rápidos</h3>
       <ul className="space-y-3">
         {links.map((link) => (
           <li key={link.name}>
             <button
               onClick={() => handleNavigation(link.id, navigate, location.pathname)}
-              className="text-gray-300 hover:text-primary transition-colors"
+              className="text-footer-text/90 hover:text-footer-hover transition-colors"
             >
               {link.name}
             </button>

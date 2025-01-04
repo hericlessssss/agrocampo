@@ -13,28 +13,30 @@ const AboutUs = () => {
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80')] bg-fixed opacity-5" />
       
       <div className="container mx-auto px-4 relative">
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
-          <div className="w-full md:w-1/2">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+          <div className="w-full lg:w-1/2">
             <div className="relative">
               <img
                 src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80"
                 alt="Fazenda AGROCAMPO"
-                className="rounded-lg shadow-2xl w-full h-[300px] md:h-[600px] object-cover transform hover:scale-105 transition-all duration-500"
+                className="rounded-lg shadow-2xl w-full h-[300px] md:h-[500px] object-cover transform hover:scale-105 transition-all duration-500"
               />
-              <div className="absolute -bottom-6 md:-bottom-8 -right-4 md:-right-8 bg-white p-4 md:p-6 rounded-lg shadow-xl max-w-[250px] md:max-w-xs">
-                <div className="flex items-center gap-3 md:gap-4 mb-2 md:mb-4">
-                  <Award className="w-6 h-6 md:w-8 md:h-8 text-accent" />
-                  <h3 className="font-semibold text-gray-800 text-sm md:text-base">Certificada</h3>
+              
+              {/* Achievement Card - Now positioned better for responsiveness */}
+              <div className="absolute bottom-4 right-4 bg-white p-4 rounded-lg shadow-xl max-w-[200px] transform hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-2">
+                  <Award className="w-6 h-6 text-accent" />
+                  <h3 className="font-semibold text-gray-800">Certificada</h3>
                 </div>
-                <p className="text-gray-600 text-xs md:text-sm">
-                  Empresa reconhecida e certificada pelos principais órgãos do setor agropecuário
+                <p className="text-gray-600 text-sm">
+                  Empresa reconhecida pelos principais órgãos do setor
                 </p>
               </div>
             </div>
           </div>
           
-          <div className="w-full md:w-1/2 mt-12 md:mt-0">
-            <div className="space-y-6 md:space-y-8">
+          <div className="w-full lg:w-1/2">
+            <div className="space-y-6">
               <div className="inline-block bg-primary/10 px-4 py-2 rounded-full">
                 <div className="flex items-center gap-2">
                   <Sprout className="text-secondary w-4 h-4 md:w-5 md:h-5" />
@@ -63,13 +65,13 @@ const AboutUs = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+              <div className="grid grid-cols-3 gap-4">
                 {stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="text-center p-4 md:p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    className="text-center p-4 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                   >
-                    <stat.icon className="w-6 h-6 md:w-8 md:h-8 text-secondary mx-auto mb-2 md:mb-3" />
+                    <stat.icon className="w-6 h-6 md:w-8 md:h-8 text-secondary mx-auto mb-2" />
                     <div className="font-bold text-xl md:text-2xl text-gray-800 mb-1">{stat.value}</div>
                     <div className="text-gray-600 text-xs md:text-sm">{stat.label}</div>
                   </div>
