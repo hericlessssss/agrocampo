@@ -10,10 +10,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Previne scroll horizontal */
   }
 
   body {
-    @apply text-gray-800 antialiased;
+    @apply text-gray-800 antialiased overflow-x-hidden; /* Previne scroll horizontal */
+    width: 100%; /* Garante que o body não ultrapasse a largura da viewport */
   }
 
   /* Improved focus styles */
@@ -40,6 +42,12 @@
   .interactive {
     @apply transition-all duration-300 ease-in-out;
   }
+
+  .container {
+    @apply px-4 md:px-6 lg:px-8 xl:px-12; /* Aumenta o padding nas laterais conforme a tela aumenta */
+    max-width: 1440px; /* Define uma largura máxima para o conteúdo */
+    margin: 0 auto;
+  }
 }
 
 /* Custom animations */
@@ -48,10 +56,30 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
+}
+
+.delay-100 {
+  animation-delay: 1s;
+}
+
+.delay-150 {
+  animation-delay: 1.5s;
+}
+
+.delay-200 {
+  animation-delay: 2s;
+}
+
+.delay-250 {
+  animation-delay: 2.5s;
+}
+
+.delay-300 {
+  animation-delay: 3s;
 }

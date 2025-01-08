@@ -10,7 +10,7 @@ const DeliverySection = () => {
             Tele Entregas
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Entregamos em Corrente e região. Faça seu pedido pelo WhatsApp!
+            Entregamos em toda a cidade de Corrente. Faça seu pedido pelo WhatsApp!
           </p>
         </div>
 
@@ -25,7 +25,7 @@ const DeliverySection = () => {
                   Entrega Rápida e Segura
                 </h3>
                 <p className="text-gray-600">
-                  Entregamos seus produtos com agilidade e segurança em toda região de Corrente - PI
+                  Entregamos seus produtos com agilidade e segurança em toda cidade de Corrente - PI
                 </p>
               </div>
             </div>
@@ -53,7 +53,7 @@ const DeliverySection = () => {
                   Área de Cobertura
                 </h3>
                 <p className="text-gray-600">
-                  Atendemos Corrente e municípios vizinhos em um raio de até 100km
+                  Atendemos Corrente e municípios vizinhos, com entrega grátis em toda cidade.
                 </p>
               </div>
             </div>

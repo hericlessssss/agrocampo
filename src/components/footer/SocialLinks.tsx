@@ -1,5 +1,6 @@
 import React from 'react';
-import { MessageCircle, Instagram, Video } from 'lucide-react';
+import { Instagram } from 'lucide-react';
+import { FaWhatsapp, FaTiktok } from 'react-icons/fa';
 
 const SocialLinks = () => {
   return (
@@ -11,7 +12,7 @@ const SocialLinks = () => {
         className="bg-footer-hover/10 p-2 rounded-full hover:bg-footer-hover/20 transition-colors group"
         aria-label="WhatsApp"
       >
-        <MessageCircle className="w-5 h-5 text-accent group-hover:text-accent/80 transition-colors" />
+        <FaWhatsapp className="w-5 h-5 text-accent group-hover:text-accent/80 transition-colors" />
       </a>
       <a
         href="https://www.tiktok.com/@agrocampocorrente0"
@@ -20,7 +21,7 @@ const SocialLinks = () => {
         className="bg-footer-hover/10 p-2 rounded-full hover:bg-footer-hover/20 transition-colors group"
         aria-label="TikTok"
       >
-        <Video className="w-5 h-5 text-accent group-hover:text-accent/80 transition-colors" />
+        <FaTiktok className="w-5 h-5 text-accent group-hover:text-accent/80 transition-colors" />
       </a>
       <a
         href="https://www.instagram.com/agrocampocorrente/"

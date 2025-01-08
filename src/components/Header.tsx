@@ -25,19 +25,16 @@ const Header = () => {
   return (
     <header className="bg-white shadow-md fixed w-full top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24 md:h-28">
           <div 
-            className="flex items-center gap-3 group cursor-pointer"
+            className="cursor-pointer"
             onClick={() => navigate('/')}
           >
             <img 
-              src="https://i.imgur.com/gfAW2Vk.png" 
+              src="https://i.imgur.com/PUkCRKA.png" 
               alt="AGROCAMPO Logo" 
-              className="h-12 md:h-14 w-auto transform transition-transform duration-300 group-hover:scale-105"
+              className="h-20 md:h-24 w-auto transform transition-transform duration-300 hover:scale-105"
             />
-            <h1 className="font-['Impact'] text-2xl md:text-3xl font-bold italic text-primary group-hover:text-secondary transition-colors drop-shadow-sm">
-              AgroCampo
-            </h1>
           </div>
 
           {/* Desktop Navigation */}

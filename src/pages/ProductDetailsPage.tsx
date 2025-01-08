@@ -2,12 +2,17 @@ import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { MessageCircle, ArrowLeft, Star } from 'lucide-react';
 import { products } from '../components/products/productData';
+import { categories } from '../data/categories';
 import RelatedProducts from '../components/products/RelatedProducts';
 
 const ProductDetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const product = products.find((p) => p.name === decodeURIComponent(id || ''));
+  
+  const category = product 
+    ? categories.find(cat => cat.id === product.categoryId)
+    : null;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,13 +37,25 @@ const ProductDetailsPage = () => {
 
   return (
     <div className="container mx-auto px-4 pt-32 pb-16">
-      <button
-        onClick={() => navigate('/')}
-        className="inline-flex items-center text-primary hover:text-secondary mb-8"
-      >
-        <ArrowLeft className="w-5 h-5 mr-2" />
-        Voltar para a página inicial
-      </button>
+      <div className="flex items-center justify-between mb-8">
+        <button
+          onClick={() => navigate('/')}
+          className="inline-flex items-center text-primary hover:text-secondary"
+        >
+          <ArrowLeft className="w-5 h-5 mr-2" />
+          Voltar para a página inicial
+        </button>
+        
+        {category && (
+          <span 
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full text-gray-600"
+            onClick={() => navigate('/', { state: { category: category.id } })}
+          >
+            <category.icon className="w-4 h-4" />
+            {category.name}
+          </span>
+        )}
+      </div>
 
       <div className="grid md:grid-cols-2 gap-12 mb-16">
         <div className="relative group">
