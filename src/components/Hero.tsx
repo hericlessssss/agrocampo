@@ -35,7 +35,7 @@ const Hero = () => {
 
             <div className="inline-block bg-white/10 backdrop-blur-md px-8 py-4 rounded-full transform hover:scale-105 transition-all duration-300">
               <span className="text-white font-medium text-base md:text-lg">
-                Desde 2010 no mercado
+                Desde 2011 no mercado
               </span>
             </div>
             
