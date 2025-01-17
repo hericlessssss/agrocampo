@@ -1,11 +1,11 @@
 import React from 'react';
-import { Stethoscope, Leaf, Wrench, PawPrint, Trees, HardHat, Sprout, Bird, Package } from 'lucide-react';
+import { Stethoscope, Leaf, Wrench, PawPrint, Trees, HardHat, Sprout, Bird, Package,  } from 'lucide-react';
 import ServiceCard from './ServiceCard';
 
 const services = [
   {
     icon: PawPrint,
-    title: 'Farmácia veterinária',
+    title: 'Farmácia Veterinária',
     description: 'Medicamentos e produtos veterinários de alta qualidade para seus animais.'
   },
   {
@@ -14,24 +14,14 @@ const services = [
     description: 'Variedade de sementes certificadas para cultivo e plantio.'
   },
   {
-    icon: Wrench,
-    title: 'Pistolas Sincro',
-    description: 'Equipamentos profissionais para manejo de rebanho.'
-  },
-  {
     icon: Stethoscope,
     title: 'Atendimento veterinário',
     description: 'Profissionais qualificados para cuidar da saúde dos seus animais.'
   },
   {
-    icon: Trees,
-    title: 'Instalação de cercas elétricas',
-    description: 'Serviço completo de instalação e manutenção de cercas elétricas.'
-  },
-  {
-    icon: HardHat,
-    title: 'Loja Country',
-    description: 'Moda country e acessórios para o homem do campo.'
+    icon: Package,
+    title: 'Selas e Arreios em Geral',
+    description: 'Produtos e acessórios de alta qualidade para montaria, incluindo selas, arreios, cabeçadas.'
   },
   {
     icon: Sprout,
@@ -61,13 +51,19 @@ const ServicesSection = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => (
-            <ServiceCard
+          {services.map((service, index) => (
+            <div
               key={service.title}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-            />
+              className={`${
+                index === services.length - 1 ? 'flex justify-center col-span-full' : ''
+              }`}
+            >
+              <ServiceCard
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+              />
+            </div>
           ))}
         </div>
       </div>
