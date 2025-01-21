@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { MessageCircle, ArrowLeft, Star } from 'lucide-react';
 import { products } from '../components/products/productData';
@@ -9,10 +9,12 @@ const ProductDetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const product = products.find((p) => p.name === decodeURIComponent(id || ''));
-  
-  const category = product 
+
+  const category = product
     ? categories.find(cat => cat.id === product.categoryId)
     : null;
+
+  const [selectedVersion, setSelectedVersion] = useState(product?.versions ? product.versions[0] : null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -34,6 +36,11 @@ const ProductDetailsPage = () => {
       </div>
     );
   }
+
+  const handleVersionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selected = product?.versions.find(v => v.version === e.target.value);
+    if (selected) setSelectedVersion(selected);
+  };
 
   return (
     <div className="container mx-auto px-4 pt-32 pb-16">
@@ -83,12 +90,29 @@ const ProductDetailsPage = () => {
 
           <p className="text-xl text-gray-600">{product.description}</p>
 
+          {/* Seletor de versão */}
+          <div className="mb-4">
+            <label htmlFor="version" className="text-gray-500 text-sm">Escolha a versão:</label>
+            <select
+              id="version"
+              value={selectedVersion?.version}
+              onChange={handleVersionChange}
+              className="block w-full mt-1 px-3 py-2 border rounded-md focus:ring-primary focus:border-primary"
+            >
+              {product.versions.map((version) => (
+                <option key={version.version} value={version.version}>
+                  {version.version} - R$ {version.price.toFixed(2)}
+                </option>
+              ))}
+            </select>
+          </div>
+
           <div className="space-y-2">
             <p className="text-gray-500 line-through text-xl">
-              R$ {product.price.toFixed(2)}
+              R$ {product.price && !isNaN(product.price) ? product.price.toFixed(2) : 'Preço indisponível'}
             </p>
             <p className="text-3xl font-bold text-secondary">
-              R$ {(product.price * 0.95).toFixed(2)}
+              R$ {selectedVersion?.price && !isNaN(selectedVersion.price) ? selectedVersion.price.toFixed(2) : 'Preço indisponível'}
               <span className="text-sm font-normal text-gray-500 ml-2">
                 (5% de desconto à vista)
               </span>
