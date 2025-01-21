@@ -1,57 +1,114 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MessageCircle, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { ProductVariant } from '../../types/product';
 
 interface ProductProps {
   name: string;
   description: string;
   price: number;
   image: string;
+  variants?: ProductVariant[];
 }
 
-const ProductCard = ({ name, description, price, image }: ProductProps) => {
+const ProductCard = ({ name, description, price, image, variants }: ProductProps) => {
   const navigate = useNavigate();
-  const discountPrice = price * 0.95;
+  const location = useLocation();
+  const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(
+    variants ? variants[0] : null
+  );
+
+  const currentPrice = selectedVariant ? selectedVariant.price : price;
+  const displayPrice = currentPrice * 1.05; // Aumenta o preço em 5%
+  const finalPrice = currentPrice; // O preço final é o preço original (após desconto de 5%)
 
   const handleWhatsAppClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre o produto: ${name}`);
-    window.open(`https://wa.me/5589999731221?text=${message}`, '_blank');
+    
+    // Cria a URL completa do produto
+    const productUrl = `${window.location.origin}/product/${encodeURIComponent(name)}`;
+    
+    // Monta a mensagem com as informações do produto
+    const variantInfo = selectedVariant ? ` (${selectedVariant.name})` : '';
+    const priceInfo = `\nValor: R$ ${finalPrice.toFixed(2)}`;
+    const message = `Olá! Gostaria de saber mais sobre o produto:\n\n*${name}${variantInfo}*${priceInfo}\n\nLink do produto: ${productUrl}`;
+    
+    window.open(`https://wa.me/5589999731221?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
     <div 
       onClick={() => navigate(`/product/${encodeURIComponent(name)}`)}
-      className="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+      className="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer h-[600px] flex flex-col"
     >
-      <div className="relative overflow-hidden">
+      {/* Imagem do Produto */}
+      <div className="relative w-full h-48 flex-shrink-0">
         <img
           src={image}
           alt={name}
-          className="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
       </div>
-      <div className="p-4">
-        <h3 className="font-poppins font-semibold text-lg text-gray-800 mb-2 group-hover:text-primary transition-colors">{name}</h3>
-        <p className="text-gray-600 text-sm mb-4">{description}</p>
-        <div className="mb-4">
-          <p className="text-gray-500 line-through">R$ {price.toFixed(2)}</p>
-          <p className="text-secondary font-semibold group-hover:text-accent transition-colors">
-            R$ {discountPrice.toFixed(2)} <span className="text-sm text-gray-500">(5% de desconto à vista)</span>
-          </p>
+
+      {/* Conteúdo do Card */}
+      <div className="flex flex-col flex-grow p-4">
+        {/* Área de Informações */}
+        <div className="flex-grow">
+          <h3 className="font-poppins font-semibold text-lg text-gray-800 mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+            {name}
+          </h3>
+          <p className="text-gray-600 text-sm mb-4 line-clamp-2">{description}</p>
+          
+          {/* Seletor de Variantes */}
+          {variants && (
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Selecione o modelo:
+              </label>
+              <select
+                value={selectedVariant?.id}
+                onChange={(e) => {
+                  const variant = variants.find(v => v.id === e.target.value);
+                  setSelectedVariant(variant || null);
+                }}
+                onClick={(e) => e.stopPropagation()}
+                className="w-full p-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+              >
+                {variants.map((variant) => (
+                  <option key={variant.id} value={variant.id}>
+                    {variant.name} - R$ {variant.price.toFixed(2)}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+
+          {/* Preços */}
+          <div className="mb-4">
+            <p className="text-gray-500 line-through">R$ {displayPrice.toFixed(2)}</p>
+            <p className="text-secondary font-semibold group-hover:text-accent transition-colors">
+              R$ {finalPrice.toFixed(2)} 
+              <span className="text-sm text-gray-500 ml-1">(5% de desconto à vista)</span>
+            </p>
+          </div>
         </div>
-        <div className="flex items-center justify-center gap-1 text-primary group-hover:text-secondary transition-colors mb-3">
-          <span className="text-sm font-medium">Ver mais detalhes</span>
-          <ArrowRight size={16} />
+
+        {/* Área de Ações (Fixada na parte inferior) */}
+        <div className="mt-auto">
+          <div className="flex items-center justify-center gap-1 text-primary group-hover:text-secondary transition-colors mb-3">
+            <span className="text-sm font-medium">Ver mais detalhes</span>
+            <ArrowRight size={16} />
+          </div>
+          
+          <button
+            onClick={handleWhatsAppClick}
+            className="w-full bg-secondary hover:bg-accent text-white py-2 px-4 rounded-md transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 hover:shadow-lg"
+          >
+            <MessageCircle size={20} />
+            Comprar via WhatsApp
+          </button>
         </div>
-        <button
-          onClick={handleWhatsAppClick}
-          className="w-full bg-secondary hover:bg-accent text-white py-2 px-4 rounded-md transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 hover:shadow-lg"
-        >
-          <MessageCircle size={20} />
-          Comprar via WhatsApp
-        </button>
       </div>
     </div>
   );
