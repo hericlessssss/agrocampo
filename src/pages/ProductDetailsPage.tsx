@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-=======
 import React, { useState, useEffect } from 'react';
->>>>>>> teste2
 import { useParams, useNavigate } from 'react-router-dom';
 import { MessageCircle, ArrowLeft, Star } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -75,12 +71,6 @@ const ProductDetailsPage = () => {
   const [shippingOptions, setShippingOptions] = useState<ShippingOption[]>([]);
 
   const product = products.find((p) => p.name === decodeURIComponent(id || ''));
-<<<<<<< HEAD
-
-  const category = product
-    ? categories.find(cat => cat.id === product.categoryId)
-    : null;
-=======
   const category = product ? categories.find((cat) => cat.id === product.categoryId) : null;
 
   const [selectedVariant, setSelectedVariant] = useState(
@@ -90,9 +80,6 @@ const ProductDetailsPage = () => {
   const currentPrice = selectedVariant ? selectedVariant.price : product?.price || 0;
   const displayPrice = currentPrice * 1.05;
   const finalPrice = currentPrice;
->>>>>>> teste2
-
-  const [selectedVersion, setSelectedVersion] = useState(product?.versions ? product.versions[0] : null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -140,11 +127,6 @@ const ProductDetailsPage = () => {
       </div>
     );
   }
-
-  const handleVersionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const selected = product?.versions.find(v => v.version === e.target.value);
-    if (selected) setSelectedVersion(selected);
-  };
 
   return (
     <div className="container mx-auto px-4 pt-32 pb-16">
@@ -214,37 +196,11 @@ const ProductDetailsPage = () => {
           {/* Descrição */}
           <p className="text-xl text-gray-600">{product.description}</p>
 
-<<<<<<< HEAD
-          {/* Seletor de versão */}
-          <div className="mb-4">
-            <label htmlFor="version" className="text-gray-500 text-sm">Escolha a versão:</label>
-            <select
-              id="version"
-              value={selectedVersion?.version}
-              onChange={handleVersionChange}
-              className="block w-full mt-1 px-3 py-2 border rounded-md focus:ring-primary focus:border-primary"
-            >
-              {product.versions.map((version) => (
-                <option key={version.version} value={version.version}>
-                  {version.version} - R$ {version.price.toFixed(2)}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className="space-y-2">
-            <p className="text-gray-500 line-through text-xl">
-              R$ {product.price && !isNaN(product.price) ? product.price.toFixed(2) : 'Preço indisponível'}
-            </p>
-            <p className="text-3xl font-bold text-secondary">
-              R$ {selectedVersion?.price && !isNaN(selectedVersion.price) ? selectedVersion.price.toFixed(2) : 'Preço indisponível'}
-=======
           {/* Preços */}
           <div className="space-y-2">
             <p className="text-gray-500 line-through text-xl">R$ {displayPrice.toFixed(2)}</p>
             <p className="text-3xl font-bold text-secondary">
               R$ {finalPrice.toFixed(2)}
->>>>>>> teste2
               <span className="text-sm font-normal text-gray-500 ml-2">
                 (5% de desconto à vista)
               </span>

@@ -7,31 +7,21 @@ export type ProductCategory = {
   description: string;
 };
 
-<<<<<<< HEAD
-export type ProductVersion = {
-  version: string;
-  price: number;
-=======
 export type ProductVariant = {
   id: string;
   name: string;
   price: number;
   images?: string[];
->>>>>>> teste2
 };
 
 export type Product = {
   id: string;
   name: string;
   description: string;
-  price: number;  // Preço principal (pode ser o preço de uma versão padrão)
+  price: number;
   image: string;
   categoryId: string;
-  versions?: ProductVersion[];  // Versões do produto, agora um array opcional
   featured?: boolean;
-<<<<<<< HEAD
-};
-=======
   variants?: ProductVariant[];
 };
 
@@ -45,4 +35,3 @@ export interface Product {
   variants?: ProductVariant[];
   thumbnail?: string;
 }
->>>>>>> teste2

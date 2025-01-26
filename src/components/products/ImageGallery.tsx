@@ -4,11 +4,8 @@ import { Navigation, Thumbs, FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
-
-
 const ImageGallery = ({ images }: { images: string[] }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
-
   return (
     <div className="relative group rounded-lg shadow-lg overflow-hidden bg-white">
       {/* Carrossel principal */}
@@ -28,7 +25,6 @@ const ImageGallery = ({ images }: { images: string[] }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-
       {/* Miniaturas */}
       <Swiper
         onSwiper={setThumbsSwiper}
