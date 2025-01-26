@@ -1,69 +1,48 @@
 import { ProductCategory } from '../types/product';
 import { 
-  Stethoscope, 
-  Leaf, 
-  Wrench, 
-  HardHat, 
-  Sprout, 
-  Package,
-  Dog,
-  Wheat,
-  Tractor
+  Zap,
+  Sun,
+  Cable,
+  Gauge,
+  Shield,
+  Wrench
 } from 'lucide-react';
 
 export const categories: ProductCategory[] = [
   {
-    id: 'veterinary',
-    name: 'Produtos Veterinários',
-    icon: Stethoscope,
-    description: 'Medicamentos e produtos para saúde animal'
+    id: 'eletrificadores',
+    name: 'Eletrificadores',
+    icon: Zap,
+    description: 'Eletrificadores de alta qualidade'
   },
   {
-    id: 'seeds',
-    name: 'Sementes e Mudas',
-    icon: Leaf,
-    description: 'Sementes certificadas e mudas de qualidade'
+    id: 'geradores',
+    name: 'Geradores Fotovoltaicos',
+    icon: Sun,
+    description: 'Geradores solares para cerca elétrica'
   },
   {
-    id: 'tools',
-    name: 'Ferramentas',
+    id: 'cabos',
+    name: 'Cabos e Cordas',
+    icon: Cable,
+    description: 'Cabos e cordas para cerca elétrica'
+  },
+  {
+    id: 'medidores',
+    name: 'Medidores e Proteção',
+    icon: Gauge,
+    description: 'Voltímetros e equipamentos de proteção'
+  },
+  {
+    id: 'isoladores',
+    name: 'Isoladores',
+    icon: Shield,
+    description: 'Isoladores e acessórios'
+  },
+  {
+    id: 'acessorios',
+    name: 'Acessórios',
     icon: Wrench,
-    description: 'Equipamentos e ferramentas para o campo'
-  },
-  {
-    id: 'country',
-    name: 'Moda Country',
-    icon: HardHat,
-    description: 'Vestuário e acessórios country'
-  },
-  {
-    id: 'garden',
-    name: 'Jardinagem',
-    icon: Sprout,
-    description: 'Produtos para jardinagem e paisagismo'
-  },
-  {
-    id: 'feed',
-    name: 'Rações',
-    icon: Dog,
-    description: 'Alimentação animal de qualidade'
-  },
-  {
-    id: 'agriculture',
-    name: 'Agricultura',
-    icon: Wheat,
-    description: 'Produtos para agricultura'
-  },
-  {
-    id: 'equipment',
-    name: 'Equipamentos',
-    icon: Tractor,
-    description: 'Máquinas e equipamentos'
-  },
-  {
-    id: 'others',
-    name: 'Outros',
-    icon: Package,
-    description: 'Outros produtos agropecuários'
+    description: 'Acessórios diversos para cerca elétrica'
   }
 ];
