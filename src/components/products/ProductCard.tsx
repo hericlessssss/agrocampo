@@ -1,50 +1,44 @@
 import React, { useState } from 'react';
 import { MessageCircle, ArrowRight } from 'lucide-react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ProductVariant } from '../../types/product';
 
 interface ProductProps {
   name: string;
   description: string;
   price: number;
-  image: string;
+  images: string[];
   variants?: ProductVariant[];
 }
 
-const ProductCard = ({ name, description, price, image, variants }: ProductProps) => {
+const ProductCard = ({ name, description, price, images, variants }: ProductProps) => {
   const navigate = useNavigate();
-  const location = useLocation();
-  const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(
-    variants ? variants[0] : null
-  );
+  const [selectedVariant] = useState<ProductVariant | null>(variants ? variants[0] : null);
 
   const currentPrice = selectedVariant ? selectedVariant.price : price;
   const displayPrice = currentPrice * 1.05; // Aumenta o preço em 5%
-  const finalPrice = currentPrice; // O preço final é o preço original (após desconto de 5%)
+  const finalPrice = currentPrice;
 
   const handleWhatsAppClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    
-    // Cria a URL completa do produto
+
     const productUrl = `${window.location.origin}/product/${encodeURIComponent(name)}`;
-    
-    // Monta a mensagem com as informações do produto
     const variantInfo = selectedVariant ? ` (${selectedVariant.name})` : '';
     const priceInfo = `\nValor: R$ ${finalPrice.toFixed(2)}`;
     const message = `Olá! Gostaria de saber mais sobre o produto:\n\n*${name}${variantInfo}*${priceInfo}\n\nLink do produto: ${productUrl}`;
-    
+
     window.open(`https://wa.me/5589999731221?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
-    <div 
+    <div
       onClick={() => navigate(`/product/${encodeURIComponent(name)}`)}
-      className="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer h-[600px] flex flex-col"
+      className="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer h-[520px] flex flex-col"
     >
       {/* Imagem do Produto */}
       <div className="relative w-full h-48 flex-shrink-0">
         <img
-          src={image}
+          src={images[0]} // Exibe a primeira imagem do array
           alt={name}
           className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
         />
@@ -53,42 +47,19 @@ const ProductCard = ({ name, description, price, image, variants }: ProductProps
 
       {/* Conteúdo do Card */}
       <div className="flex flex-col flex-grow p-4">
-        {/* Área de Informações */}
         <div className="flex-grow">
+          {/* Nome do Produto */}
           <h3 className="font-poppins font-semibold text-lg text-gray-800 mb-2 line-clamp-2 group-hover:text-primary transition-colors">
             {name}
           </h3>
+          {/* Descrição do Produto */}
           <p className="text-gray-600 text-sm mb-4 line-clamp-2">{description}</p>
-          
-          {/* Seletor de Variantes */}
-          {variants && (
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Selecione o modelo:
-              </label>
-              <select
-                value={selectedVariant?.id}
-                onChange={(e) => {
-                  const variant = variants.find(v => v.id === e.target.value);
-                  setSelectedVariant(variant || null);
-                }}
-                onClick={(e) => e.stopPropagation()}
-                className="w-full p-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-              >
-                {variants.map((variant) => (
-                  <option key={variant.id} value={variant.id}>
-                    {variant.name} - R$ {variant.price.toFixed(2)}
-                  </option>
-                ))}
-              </select>
-            </div>
-          )}
 
           {/* Preços */}
           <div className="mb-4">
             <p className="text-gray-500 line-through">R$ {displayPrice.toFixed(2)}</p>
             <p className="text-secondary font-semibold group-hover:text-accent transition-colors">
-              R$ {finalPrice.toFixed(2)} 
+              R$ {finalPrice.toFixed(2)}
               <span className="text-sm text-gray-500 ml-1">(5% de desconto à vista)</span>
             </p>
           </div>
@@ -100,7 +71,7 @@ const ProductCard = ({ name, description, price, image, variants }: ProductProps
             <span className="text-sm font-medium">Ver mais detalhes</span>
             <ArrowRight size={16} />
           </div>
-          
+
           <button
             onClick={handleWhatsAppClick}
             className="w-full bg-secondary hover:bg-accent text-white py-2 px-4 rounded-md transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 hover:shadow-lg"
