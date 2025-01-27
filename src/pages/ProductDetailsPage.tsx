@@ -5,6 +5,12 @@ import { products } from '../components/products/productData';
 import { categories } from '../data/categories';
 import RelatedProducts from '../components/products/RelatedProducts';
 import ShippingCalculator from '../components/shipping/ShippingCalculator';
+import ImageGallery from '../components/products/ImageGallery';
+
+// Importação dos estilos do Swiper
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
 
 interface ShippingOption {
   service: string;
@@ -104,6 +110,7 @@ const ProductDetailsPage = () => {
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 mb-16">
+<<<<<<< Updated upstream
         <div className="relative group">
           <img
             src={product.image}
@@ -112,6 +119,10 @@ const ProductDetailsPage = () => {
           />
           <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg" />
         </div>
+=======
+        {/* Galeria de Imagens */}
+        <ImageGallery images={product.images} />
+>>>>>>> Stashed changes
 
         <div className="space-y-6">
           <h1 className="text-4xl font-bold text-gray-800">{product.name}</h1>

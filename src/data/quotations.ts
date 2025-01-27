@@ -4,29 +4,29 @@ export const quotations: Quotation[] = [
   {
     id: 'boi-gordo',
     nome: 'Boi Gordo',
-    valor: 'R$ 236,85',
+    valor: 'R$ 325,10',
     variacao: '+1.2%',
-    ultimaAtualizacao: '2024-03-20'
+    ultimaAtualizacao: '2025-01-27'
   },
   {
     id: 'bezerro',
     nome: 'Bezerro',
-    valor: 'R$ 2.485,50',
+    valor: 'R$ 2.643,37',
     variacao: '+0.8%',
-    ultimaAtualizacao: '2024-03-20'
+    ultimaAtualizacao: '2025-01-27'
   },
   {
     id: 'milho',
     nome: 'Milho',
-    valor: 'R$ 65,42',
-    variacao: '-1.5%',
-    ultimaAtualizacao: '2024-03-20'
+    valor: 'R$ 73,86',
+    variacao: '+0.5%',
+    ultimaAtualizacao: '2025-01-27'
   },
   {
     id: 'soja',
     nome: 'Soja',
-    valor: 'R$ 152,80',
-    variacao: '-0.9%',
-    ultimaAtualizacao: '2024-03-20'
+    valor: 'R$ 134,41',
+    variacao: '-0.3%',
+    ultimaAtualizacao: '2025-01-27'
   }
 ];
