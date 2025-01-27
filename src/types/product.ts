@@ -11,6 +11,7 @@ export type ProductVariant = {
   id: string;
   name: string;
   price: number;
+  images?: string[];
 };
 
 export type Product = {
@@ -23,3 +24,14 @@ export type Product = {
   featured?: boolean;
   variants?: ProductVariant[];
 };
+
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  images: string[];
+  categoryId: string;
+  variants?: ProductVariant[];
+  thumbnail?: string;
+}
