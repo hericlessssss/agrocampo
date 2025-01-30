@@ -16,7 +16,7 @@ const ProductCard = ({ name, description, price, images, variants }: ProductProp
   const [selectedVariant] = useState<ProductVariant | null>(variants ? variants[0] : null);
 
   const currentPrice = selectedVariant ? selectedVariant.price : price;
-  const displayPrice = currentPrice * 1.05; // Aumenta o preço em 5%
+  const displayPrice = currentPrice * 1.05;
   const finalPrice = currentPrice;
 
   const handleWhatsAppClick = (e: React.MouseEvent) => {
@@ -33,16 +33,20 @@ const ProductCard = ({ name, description, price, images, variants }: ProductProp
   return (
     <div
       onClick={() => navigate(`/product/${encodeURIComponent(name)}`)}
-      className="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer h-[520px] flex flex-col"
+      className="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex flex-col"
     >
-      {/* Imagem do Produto */}
-      <div className="relative w-full h-48 flex-shrink-0">
-        <img
-          src={images[0]} // Exibe a primeira imagem do array
-          alt={name}
-          className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+      {/* Container da Imagem - Formato quadrado com padding interno */}
+      <div className="relative w-full pt-[100%] bg-gray-50">
+        <div className="absolute inset-0 p-6">
+          <div className="w-full h-full relative">
+            <img
+              src={images[0]}
+              alt={name}
+              className="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg" />
+          </div>
+        </div>
       </div>
 
       {/* Conteúdo do Card */}
@@ -52,22 +56,29 @@ const ProductCard = ({ name, description, price, images, variants }: ProductProp
           <h3 className="font-poppins font-semibold text-lg text-gray-800 mb-2 line-clamp-2 group-hover:text-primary transition-colors">
             {name}
           </h3>
+          
           {/* Descrição do Produto */}
-          <p className="text-gray-600 text-sm mb-4 line-clamp-2">{description}</p>
+          <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+            {description}
+          </p>
 
           {/* Preços */}
           <div className="mb-4">
-            <p className="text-gray-500 line-through">R$ {displayPrice.toFixed(2)}</p>
+            <p className="text-gray-500 line-through">
+              R$ {displayPrice.toFixed(2)}
+            </p>
             <p className="text-secondary font-semibold group-hover:text-accent transition-colors">
               R$ {finalPrice.toFixed(2)}
-              <span className="text-sm text-gray-500 ml-1">(5% de desconto à vista)</span>
+              <span className="text-sm text-gray-500 ml-1">
+                (5% de desconto à vista)
+              </span>
             </p>
           </div>
         </div>
 
-        {/* Área de Ações (Fixada na parte inferior) */}
-        <div className="mt-auto">
-          <div className="flex items-center justify-center gap-1 text-primary group-hover:text-secondary transition-colors mb-3">
+        {/* Área de Ações */}
+        <div className="mt-auto space-y-3">
+          <div className="flex items-center justify-center gap-1 text-primary group-hover:text-secondary transition-colors">
             <span className="text-sm font-medium">Ver mais detalhes</span>
             <ArrowRight size={16} />
           </div>

@@ -71,9 +71,9 @@ export const products: Product[] = [
     description: "Gerador solar para alimentação de cercas elétricas. Sistema completo e eficiente.",
     price: 1141.00,
     images: [
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80"
+      "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg",
+      "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg",
+      "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg"
     ],
     categoryId: 'geradores',
     specifications: [
@@ -88,8 +88,8 @@ export const products: Product[] = [
         name: '25 Watts',
         price: 1141.00,
         images: [
-          "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80"
+          "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg",
+          "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg"
         ]
       },
       {
@@ -97,8 +97,8 @@ export const products: Product[] = [
         name: '55 Watts',
         price: 1976.00,
         images: [
-          "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80"
+          "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg",
+          "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg"
         ]
       },
       {
@@ -106,8 +106,8 @@ export const products: Product[] = [
         name: '95 Watts',
         price: 2615.00,
         images: [
-          "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80"
+          "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg",
+          "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg"
         ]
       }
     ],
@@ -123,7 +123,7 @@ export const products: Product[] = [
     description: "Cabo subterrâneo de alta qualidade para instalações elétricas.",
     price: 500.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/cabo-subterraneo-%E2%80%93-2-7mm-%E2%80%93-speedrite-107398/282904.jpg"
     ],
     categoryId: 'cabos',
     specifications: [
@@ -141,7 +141,7 @@ export const products: Product[] = [
     description: "Cabo subterrâneo ideal para instalações menores.",
     price: 437.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/tru-test-cabo-subterraneo-1-6mm-x-50m-speedrite-104079/279493.jpg"
     ],
     categoryId: 'cabos',
     specifications: [
@@ -159,7 +159,7 @@ export const products: Product[] = [
     description: "Corda eletroplástica resistente e durável.",
     price: 687.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/corda-elastica-speedrite-%E2%80%93-50-metros-tru-test-107160/282648.jpg"
     ],
     categoryId: 'cabos',
     specifications: [
@@ -177,7 +177,7 @@ export const products: Product[] = [
     description: "Fio eletroplástico para cercas elétricas.",
     price: 571.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/tru-test-fio-eletroplastico-patriot-500m-99040/274456.jpg"
     ],
     categoryId: 'cabos',
     specifications: [
@@ -195,7 +195,7 @@ export const products: Product[] = [
     description: "Insultubo para proteção de fios e cabos.",
     price: 226.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/tru-test-insultube-7-16-com-50m-104078/279492.jpg"
     ],
     categoryId: 'cabos',
     specifications: [
@@ -213,7 +213,7 @@ export const products: Product[] = [
     description: "Fita condutora de alta qualidade.",
     price: 141.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/tru-test-fita-eletroplastica-maxitape-50-m-99120/274536.jpg"
     ],
     categoryId: 'cabos',
     specifications: [
@@ -231,7 +231,7 @@ export const products: Product[] = [
     description: "Carretel jumbo para cercas elétricas.",
     price: 345.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/carretel-jumbo-%E2%80%93-speedrite-107397/282903.jpg"
     ],
     categoryId: 'acessorios',
     stock: 20,
@@ -244,7 +244,7 @@ export const products: Product[] = [
     description: "Voltímetro digital de 3 dígitos para medição precisa.",
     price: 493.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/voltimetro-digital-%E2%80%93-speedrite-107401/282907.jpg"
     ],
     categoryId: 'acessorios',
     stock: 15,
@@ -257,7 +257,7 @@ export const products: Product[] = [
     description: "Voltímetro com indicador de falhas, essencial para diagnóstico.",
     price: 1560.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/tru-test-controle-remoto-p-eletrificador-104062/279476.jpg"
     ],
     categoryId: 'acessorios',
     stock: 10,
@@ -270,7 +270,7 @@ export const products: Product[] = [
     description: "Kit completo para proteção contra raios.",
     price: 230.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://www.zebu.com.br/wp-content/uploads/2019/03/Kit-para-Raio-Completo-1.jpg"
     ],
     categoryId: 'acessorios',
     stock: 30,
@@ -283,7 +283,7 @@ export const products: Product[] = [
     description: "Dispositivo de proteção contra raios.",
     price: 113.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/tru-test-dispositivo-para-raio-sa003b-104084/279498.jpg"
     ],
     categoryId: 'acessorios',
     stock: 25,
@@ -296,7 +296,7 @@ export const products: Product[] = [
     description: "Chave interruptora para controle de circuitos.",
     price: 81.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/tru-test-chave-interruptora-104082/279496.jpg"
     ],
     categoryId: 'acessorios',
     stock: 50,
@@ -309,7 +309,7 @@ export const products: Product[] = [
     description: "Hastes para aterramento de cercas elétricas.",
     price: 81.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/conector-para-haste-de-aterramento-96909/272326.jpg"
     ],
     categoryId: 'acessorios',
     stock: 40,
@@ -322,7 +322,7 @@ export const products: Product[] = [
     description: "Vareta plástica para instalação de cercas elétricas.",
     price: 31.50,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://images.tcdn.com.br/img/img_prod/554605/kit_50_vareta_de_fibra_de_vidro_para_cerca_120cmx10mm_amarela_zebu_129735_1_4dbb7340307278e2ec8afd376a029ed5.jpg"
     ],
     categoryId: 'acessorios',
     stock: 60,
@@ -335,7 +335,7 @@ export const products: Product[] = [
     description: "Conectores galvanizados para hastes de aterramento.",
     price: 18.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/conector-galvanizado-para-haste-de-aterramento-tru-test-107200/282700.jpg"
     ],
     categoryId: 'acessorios',
     stock: 100,
@@ -348,7 +348,7 @@ export const products: Product[] = [
     description: "Porteira Speed Pró para cercas elétricas.",
     price: 26.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://images.tcdn.com.br/img/img_prod/1055475/porteira_speedrite_pro_9578_1_71999c0dab81903e7cb34f460c263fa3.jpg"
     ],
     categoryId: 'acessorios',
     stock: 40,
@@ -361,7 +361,7 @@ export const products: Product[] = [
     description: "Suporte resistente para porteiras.",
     price: 22.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agroline.fbitsstatic.net/img/p/suporte-de-porteira-universal-tru-test-107201/282701.jpg"
     ],
     categoryId: 'acessorios',
     stock: 50,
@@ -374,7 +374,7 @@ export const products: Product[] = [
     description: "Isoladores do tipo anel para cercas elétricas.",
     price: 11.50,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://agromania.cdn.magazord.com.br/img/2022/02/produto/11010/isolador-anel-zebu.jpg"
     ],
     categoryId: 'acessorios',
     stock: 150,
@@ -387,7 +387,7 @@ export const products: Product[] = [
     description: "Chave para instalação de isoladores tipo anel.",
     price: 16.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://images.tcdn.com.br/img/img_prod/1055475/chave_aplicacao_isolador_anel_speedrite_9570_2_4aeb02e5a1955dc104e230b28dcaf47c.png"
     ],
     categoryId: 'acessorios',
     stock: 50,
@@ -400,7 +400,7 @@ export const products: Product[] = [
     description: "Chave para operação de catracas redondas.",
     price: 68.50,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://cdn.awsli.com.br/2500x2500/1845/1845490/produto/149758666b476dc12c9.jpg"
     ],
     categoryId: 'acessorios',
     stock: 35,
@@ -413,7 +413,7 @@ export const products: Product[] = [
     description: "Isolador de canto para cercas elétricas.",
     price: 3.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://images.tcdn.com.br/img/img_prod/374765/72_1_20221104161250.jpg"
     ],
     categoryId: 'acessorios',
     stock: 250,
@@ -426,7 +426,7 @@ export const products: Product[] = [
     description: "Isolador de linha W para cercas elétricas.",
     price: 3.00,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://cdn.awsli.com.br/600x450/1811/1811650/produto/90021787/b2d4bf403c.jpg"
     ],
     categoryId: 'acessorios',
     stock: 200,
@@ -439,7 +439,7 @@ export const products: Product[] = [
     description: "Catraca redonda de alumínio para cercas elétricas.",
     price: 26.50,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://images.tcdn.com.br/img/img_prod/1055475/catraca_de_aluminio_redonda_speedrite_8157_1_8a9aebb70231f5bfb38e1a6a20c35c8c.png"
     ],
     categoryId: 'acessorios',
     stock: 60,
@@ -452,7 +452,7 @@ export const products: Product[] = [
     description: "Grampo conector para fixação de fios.",
     price: 9.50,
     images: [
-      "https://images.unsplash.com/photo-1601084881623-cdf9a8ea242c?auto=format&fit=crop&q=80"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwmjkvqGrMtlK0e-PbNFCMXRXv7R73ge5FCQ&s"
     ],
     categoryId: 'acessorios',
     stock: 300,

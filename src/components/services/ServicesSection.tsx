@@ -40,12 +40,6 @@ const servicesData = [
     title: 'Venda de Animais',
     description: 'Comercialização responsável de animais selecionados.'
   },
-  {
-    id: 7,
-    icon: Tractor,
-    title: 'Implementos',
-    description: 'Equipamentos e implementos agrícolas para sua propriedade.'
-  }
 ] as const;
 
 // Componente de título memoizado
