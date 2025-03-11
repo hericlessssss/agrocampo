@@ -12,7 +12,9 @@ export const products: Product[] = [
       "https://br.speedrite.com/sites/default/files/linha-mp-mp1000.png",
       "https://br.speedrite.com/sites/default/files/linha-mp-mp2000.png",
       "https://br.speedrite.com/sites/default/files/linha-mp-mp4000.png",
-      "https://br.speedrite.com/sites/default/files/linha-mp-mp8000.png"
+      "https://br.speedrite.com/sites/default/files/linha-mp-mp8000.png",
+      "https://cdn.awsli.com.br/2500x2500/1811/1811650/produto/84391061/bdf823feff.jpg"
+
     ],
     categoryId: 'eletrificadores',
     specifications: [
@@ -57,6 +59,15 @@ export const products: Product[] = [
           "https://br.speedrite.com/sites/default/files/linha-mp-mp8000.png",
           "https://br.speedrite.com/sites/default/files/linha-mp-mp8000.png"
         ]
+      },
+      {
+        id: 'mp-12000',
+        name: 'MP 12000',
+        price: 7568.00,
+        images: [
+          "https://cdn.awsli.com.br/2500x2500/1811/1811650/produto/84391061/bdf823feff.jpg",
+          "https://cdn.awsli.com.br/2500x2500/1811/1811650/produto/84391061/bdf823feff.jpg"
+        ]
       }
     ],
     stock: 15,
@@ -71,9 +82,9 @@ export const products: Product[] = [
     description: "Gerador solar para alimentação de cercas elétricas. Sistema completo e eficiente.",
     price: 1141.00,
     images: [
-      "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg",
-      "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg",
-      "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg"
+      "https://images.tcdn.com.br/img/img_prod/1055475/gerador_fotovoltaico_speedrite_25_watts_9542_1_07d3639d5001f7330aaf5cf414865745.jpg",
+      "https://images.tcdn.com.br/img/img_prod/1055475/gerador_fotovoltaico_speedrite_25_watts_9542_1_07d3639d5001f7330aaf5cf414865745.jpg",
+      "https://images.tcdn.com.br/img/img_prod/1055475/gerador_fotovoltaico_speedrite_25_watts_9542_1_07d3639d5001f7330aaf5cf414865745.jpg"
     ],
     categoryId: 'geradores',
     specifications: [
@@ -88,26 +99,26 @@ export const products: Product[] = [
         name: '25 Watts',
         price: 1141.00,
         images: [
-          "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg",
-          "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg"
+          "https://images.tcdn.com.br/img/img_prod/1055475/gerador_fotovoltaico_speedrite_25_watts_9542_1_07d3639d5001f7330aaf5cf414865745.jpg",
+          "https://images.tcdn.com.br/img/img_prod/1055475/gerador_fotovoltaico_speedrite_25_watts_9542_1_07d3639d5001f7330aaf5cf414865745.jpg"
         ]
       },
       {
         id: 'gerador-55w',
         name: '55 Watts',
-        price: 1976.00,
+        price: 1581.00,
         images: [
-          "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg",
-          "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg"
+          "https://images.tcdn.com.br/img/img_prod/1055475/gerador_fotovoltaico_speedrite_25_watts_9542_1_07d3639d5001f7330aaf5cf414865745.jpg",
+          "https://images.tcdn.com.br/img/img_prod/1055475/gerador_fotovoltaico_speedrite_25_watts_9542_1_07d3639d5001f7330aaf5cf414865745.jpg"
         ]
       },
       {
         id: 'gerador-95w',
         name: '95 Watts',
-        price: 2615.00,
+        price: 2043.00,
         images: [
-          "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg",
-          "https://plantec.com/arquivos/produtos/imagens_adicionais/original/FOTO_44e2a4330e7849915e51f30f6b306524.jpg"
+          "https://images.tcdn.com.br/img/img_prod/1055475/gerador_fotovoltaico_speedrite_25_watts_9542_1_07d3639d5001f7330aaf5cf414865745.jpg",
+          "https://images.tcdn.com.br/img/img_prod/1055475/gerador_fotovoltaico_speedrite_25_watts_9542_1_07d3639d5001f7330aaf5cf414865745.jpg"
         ]
       }
     ],
@@ -121,9 +132,9 @@ export const products: Product[] = [
     id: 'cabo-subterraneo-2.7',
     name: "Cabo Subterrâneo 2.7 mm",
     description: "Cabo subterrâneo de alta qualidade para instalações elétricas.",
-    price: 500.00,
+    price: 438.00,
     images: [
-      "https://agroline.fbitsstatic.net/img/p/cabo-subterraneo-%E2%80%93-2-7mm-%E2%80%93-speedrite-107398/282904.jpg"
+      "https://cdn.awsli.com.br/600x450/1811/1811650/produto/90003712/b4e6641e5b.jpg"
     ],
     categoryId: 'cabos',
     specifications: [
@@ -139,9 +150,9 @@ export const products: Product[] = [
     id: 'cabo-subterraneo-1.6',
     name: "Cabo Subterrâneo 1.6 mm",
     description: "Cabo subterrâneo ideal para instalações menores.",
-    price: 437.00,
+    price: 382.00,
     images: [
-      "https://agroline.fbitsstatic.net/img/p/tru-test-cabo-subterraneo-1-6mm-x-50m-speedrite-104079/279493.jpg"
+      "https://cdn.awsli.com.br/2500x2500/1811/1811650/produto/90004096/d1e6b7bf60.jpg"
     ],
     categoryId: 'cabos',
     specifications: [
@@ -241,10 +252,10 @@ export const products: Product[] = [
   {
     id: 'voltimetro-digital',
     name: "Voltímetro Digital 3 Dígitos",
-    description: "Voltímetro digital de 3 dígitos para medição precisa.",
-    price: 493.00,
+    description: "Voltimetro digital de 3 dígitos para medição precisa.",
+    price: 540.00,
     images: [
-      "https://agroline.fbitsstatic.net/img/p/voltimetro-digital-%E2%80%93-speedrite-107401/282907.jpg"
+      "https://cdn.awsli.com.br/600x450/1811/1811650/produto/92717402/9027ec0cd4.jpg"
     ],
     categoryId: 'acessorios',
     stock: 15,
@@ -254,7 +265,7 @@ export const products: Product[] = [
   {
     id: 'voltimetro-falhas',
     name: "Voltímetro Indicador de Falhas",
-    description: "Voltímetro com indicador de falhas, essencial para diagnóstico.",
+    description: "Voltimetro com indicador de falhas, essencial para diagnóstico.",
     price: 1560.00,
     images: [
       "https://agroline.fbitsstatic.net/img/p/tru-test-controle-remoto-p-eletrificador-104062/279476.jpg"
@@ -270,7 +281,7 @@ export const products: Product[] = [
     description: "Kit completo para proteção contra raios.",
     price: 230.00,
     images: [
-      "https://www.zebu.com.br/wp-content/uploads/2019/03/Kit-para-Raio-Completo-1.jpg"
+      "https://cdn.awsli.com.br/600x450/1811/1811650/produto/90005086/7e96e700f6.jpg"
     ],
     categoryId: 'acessorios',
     stock: 30,
@@ -283,7 +294,7 @@ export const products: Product[] = [
     description: "Dispositivo de proteção contra raios.",
     price: 113.00,
     images: [
-      "https://agroline.fbitsstatic.net/img/p/tru-test-dispositivo-para-raio-sa003b-104084/279498.jpg"
+      "https://cdn.awsli.com.br/2500x2500/1811/1811650/produto/90010601/0f094f727c.jpg"
     ],
     categoryId: 'acessorios',
     stock: 25,
@@ -296,7 +307,7 @@ export const products: Product[] = [
     description: "Chave interruptora para controle de circuitos.",
     price: 81.00,
     images: [
-      "https://agroline.fbitsstatic.net/img/p/tru-test-chave-interruptora-104082/279496.jpg"
+      "https://br.speedrite.com/sites/default/files/chave-interruptora.png"
     ],
     categoryId: 'acessorios',
     stock: 50,
@@ -307,9 +318,9 @@ export const products: Product[] = [
     id: 'hastes-de-aterramento',
     name: "Hastes de Aterramento",
     description: "Hastes para aterramento de cercas elétricas.",
-    price: 81.00,
+    price: 82.00,
     images: [
-      "https://agroline.fbitsstatic.net/img/p/conector-para-haste-de-aterramento-96909/272326.jpg"
+      "https://images.tcdn.com.br/img/img_prod/1055475/haste_aterramento_galvanizada_2m_speedrite_8702_1_1ccf481cb44c341f3aecce0931173b88.png"
     ],
     categoryId: 'acessorios',
     stock: 40,
@@ -333,7 +344,7 @@ export const products: Product[] = [
     id: 'conectores-galvanizado',
     name: "Conectores Galvanizado Para Hastes",
     description: "Conectores galvanizados para hastes de aterramento.",
-    price: 18.00,
+    price: 20.00,
     images: [
       "https://agroline.fbitsstatic.net/img/p/conector-galvanizado-para-haste-de-aterramento-tru-test-107200/282700.jpg"
     ],
@@ -344,8 +355,8 @@ export const products: Product[] = [
   },
   {
     id: 'porteira-speed-pro',
-    name: "Porteira Speed Pró",
-    description: "Porteira Speed Pró para cercas elétricas.",
+    name: "Porteira Isolada Speed Pró",
+    description: "Porteira Isolada Speed Pró para cercas elétricas.",
     price: 26.00,
     images: [
       "https://images.tcdn.com.br/img/img_prod/1055475/porteira_speedrite_pro_9578_1_71999c0dab81903e7cb34f460c263fa3.jpg"
@@ -359,9 +370,9 @@ export const products: Product[] = [
     id: 'suporte-de-porteira',
     name: "Suporte de Porteira",
     description: "Suporte resistente para porteiras.",
-    price: 22.00,
+    price: 20.00,
     images: [
-      "https://agroline.fbitsstatic.net/img/p/suporte-de-porteira-universal-tru-test-107201/282701.jpg"
+      "https://br.speedrite.com/sites/default/files/suporte-de-porteria.png"
     ],
     categoryId: 'acessorios',
     stock: 50,
@@ -372,7 +383,7 @@ export const products: Product[] = [
     id: 'isoladores-anel',
     name: "Isoladores Tipo Anel",
     description: "Isoladores do tipo anel para cercas elétricas.",
-    price: 11.50,
+    price: 175.00,
     images: [
       "https://agromania.cdn.magazord.com.br/img/2022/02/produto/11010/isolador-anel-zebu.jpg"
     ],
@@ -387,7 +398,20 @@ export const products: Product[] = [
     description: "Chave para instalação de isoladores tipo anel.",
     price: 16.00,
     images: [
-      "https://images.tcdn.com.br/img/img_prod/1055475/chave_aplicacao_isolador_anel_speedrite_9570_2_4aeb02e5a1955dc104e230b28dcaf47c.png"
+      "https://images.tcdn.com.br/img/img_prod/1055475/chave_aplicacao_isolador_anel_speedrite_9570_1_917f8add43c233a54599288ccfbf68c9.png"
+    ],
+    categoryId: 'acessorios',
+    stock: 50,
+    rating: 4.3,
+    sku: 'CHAVE-ISOLADOR-ANEL'
+  },
+  {
+    id: 'isolador-ajustável-para-haste-speedrite',
+    name: "Isolador Ajustável para Haste Speedrite",
+    description: "Isolador Ajustável para Haste Speedrite.",
+    price: 175.00,
+    images: [
+      "https://br.speedrite.com/sites/default/files/isolador-ajustavel.png"
     ],
     categoryId: 'acessorios',
     stock: 50,
@@ -413,7 +437,7 @@ export const products: Product[] = [
     description: "Isolador de canto para cercas elétricas.",
     price: 3.00,
     images: [
-      "https://images.tcdn.com.br/img/img_prod/374765/72_1_20221104161250.jpg"
+      "https://cdn.awsli.com.br/2500x2500/2045/2045823/produto/118836235/33-b1gzdm1atm.jpg"
     ],
     categoryId: 'acessorios',
     stock: 250,
@@ -450,13 +474,143 @@ export const products: Product[] = [
     id: 'grampo-conector',
     name: "Grampo Conector",
     description: "Grampo conector para fixação de fios.",
-    price: 9.50,
+    price: 10.90,
     images: [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwmjkvqGrMtlK0e-PbNFCMXRXv7R73ge5FCQ&s"
+      "https://cdn.awsli.com.br/600x450/1811/1811650/produto/90089435/085975ae66.jpg"
     ],
     categoryId: 'acessorios',
     stock: 300,
     rating: 4.5,
     sku: 'GRAMPO-CONECTOR'
+  },
+  {
+    id: "seringa-accurus-12ml-tubo",
+    name: "Seringa Accurus 12ml com Tubo",
+    description: "Seringa Accurus de 12ml com tubo para aplicações veterinárias.",
+    price: 510.00,
+    images: [
+      "https://cdn.awsli.com.br/600x450/1811/1811650/produto/92796350/de8fb39ad0.jpg"
+    ],
+    categoryId: "seringas",
+    stock: 50,
+    rating: 4.8,
+    sku: "SERINGA-ACCURUS-12ML-TUBO"
+  },
+  {
+    id: "extensor-injecao-intramuscular",
+    name: "Extensor de Injeção Intramuscular",
+    description: "Extensor para injeção intramuscular, garantindo maior alcance e precisão.",
+    price: 95.00,
+    images: [
+      "https://agbagroprodutos.com.br/wp-content/uploads/2024/11/15308810044-design-sem-nome-2024-11-04t181705-396.jpg"
+    ],
+    categoryId: "acessorios",
+    stock: 75,
+    rating: 4.7,
+    sku: "EXTENSOR-INTRAMUSCULAR"
+  },
+  {
+    id: "seringa-premium-12ml-tubo-conectores",
+    name: "Seringa Premium 12ml com Tubo e 3x Conectores para Frascos",
+    description: "Seringa Premium de 12ml com tubo e três conectores para frascos.",
+    price: 400.00,
+    images: [
+      "https://cdn.awsli.com.br/2500x2500/1811/1811650/produto/92796350/de8fb39ad0.jpg"
+    ],
+    categoryId: "seringas",
+    stock: 40,
+    rating: 4.9,
+    sku: "SERINGA-PREMIUM-12ML-CON"
+  },
+  {
+    id: "mola-reposicao-aco-inox",
+    name: "Mola de Reposição em Aço Inox para Porteira Isolada",
+    description: "Mola de reposição feita em aço inoxidável para porteiras isoladas.",
+    price: 14.50,
+    images: [
+      "https://agroline.fbitsstatic.net/img/p/mola-de-reposicao-para-porteira-isolada-%E2%80%93-speedrite-107408/282914.jpg"
+    ],
+    categoryId: "acessorios",
+    stock: 100,
+    rating: 4.5,
+    sku: "MOLA-REPOSICAO-ACO-INOX"
+  },
+  {
+    id: "protetor-agulha-seringa-accurus-5ml-12ml",
+    name: "Protetor de Agulha para Seringa Accurus 5ml e 12ml",
+    description: "Protetor de agulha compatível com seringas Accurus de 5ml e 12ml.",
+    price: 51.00,
+    images: [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_962155-MLB74803540377_022024-F.webp"
+    ],
+    categoryId: "acessorios",
+    stock: 60,
+    rating: 4.6,
+    sku: "PROTETOR-AGULHA-ACCURUS"
+  },
+  {
+    id: "protetor-agulha-seringa-accurus-6ml",
+    name: "Protetor de Agulha para Seringa Accurus 6ml",
+    description: "Protetor de agulha compatível com seringas Accurus de 6ml.",
+    price: 51.00,
+    images: [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_846262-MLB74803324151_022024-F.webp"
+    ],
+    categoryId: "acessorios",
+    stock: 60,
+    rating: 4.6,
+    sku: "PROTETOR-AGULHA-6ML"
+  },
+  {
+    id: "protetor-frasco-seringas-frasco-acoplado",
+    name: "Protetor de Frasco para Seringas Frasco Acoplado",
+    description: "Protetor de frasco para seringas de frasco acoplado.",
+    price: 66.00,
+    images: [
+      "https://agbagroprodutos.com.br/wp-content/uploads/2024/11/15308472580-design-sem-nome-2024-11-01t151437-379.jpg"
+    ],
+    categoryId: "acessorios",
+    stock: 55,
+    rating: 4.6,
+    sku: "PROTETOR-FRASCO-SERINGA"
+  },
+  {
+    id: "barril-seringa-accurus-12ml",
+    name: "Barril para Seringa Accurus 12ml",
+    description: "Barril de reposição para seringas Accurus de 12ml.",
+    price: 94.00,
+    images: [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_834218-MLB72552510219_102023-F.webp"
+    ],
+    categoryId: "acessorios",
+    stock: 70,
+    rating: 4.7,
+    sku: "BARRIL-SERINGA-ACCURUS"
+  },
+  {
+    id: "barril-seringa-premium-12ml",
+    name: "Barril para Seringa Premium 12ml",
+    description: "Barril de reposição para seringas Premium de 12ml.",
+    price: 94.00,
+    images: [
+      "https://cdn.awsli.com.br/600x700/987/987576/produto/219625553/barril-seringa-1-lriu0266wu.jpg"
+    ],
+    categoryId: "acessorios",
+    stock: 70,
+    rating: 4.7,
+    sku: "BARRIL-SERINGA-PREMIUM"
+  },
+  {
+    id: "tubo-pvc-seringa-fluxo-continuo",
+    name: "Tubo de PVC 6.4x1500mm para Seringas de Fluxo Contínuo",
+    description: "Tubo de PVC de 6.4x1500mm para seringas de fluxo contínuo.",
+    price: 30.00,
+    images: [
+      "https://images.tcdn.com.br/img/img_prod/1055475/180_tubo_pvc_6_4x1500mm_seringa_fluxo_continuo_simcro_9389_1_0c27a440b15922acb264e018a647be90.jpg"
+    ],
+    categoryId: "acessorios",
+    stock: 90,
+    rating: 4.6,
+    sku: "TUBO-PVC-FLUXO-CONTINUO"
   }
 ];
