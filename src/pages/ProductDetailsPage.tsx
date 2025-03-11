@@ -44,7 +44,11 @@ const ProductDetailsPage = () => {
   };
 
   const handleWhatsAppClick = () => {
-    let message = `Olá! Gostaria de saber mais sobre o produto:\n\n*${product?.name}*\n`;
+    if (!product) return;
+
+    // Usar window.location.origin para obter a URL base correta
+    const productUrl = `${window.location.origin}/product/${encodeURIComponent(product.name)}`;
+    let message = `Olá! Gostaria de saber mais sobre o produto:\n\n*${product.name}*\n`;
     
     if (selectedVariant) {
       message += `Modelo: ${selectedVariant.name}\n`;
@@ -59,7 +63,7 @@ const ProductDetailsPage = () => {
       });
     }
 
-    message += `\nPor favor, gostaria de mais informações.`;
+    message += `\nLink do produto: ${productUrl}`;
 
     window.open(
       `https://wa.me/5589999731221?text=${encodeURIComponent(message)}`,

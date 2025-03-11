@@ -22,6 +22,7 @@ const ProductCard = ({ name, description, price, images, variants }: ProductProp
   const handleWhatsAppClick = (e: React.MouseEvent) => {
     e.stopPropagation();
 
+    // Usar window.location.origin para obter a URL base correta
     const productUrl = `${window.location.origin}/product/${encodeURIComponent(name)}`;
     const variantInfo = selectedVariant ? ` (${selectedVariant.name})` : '';
     const priceInfo = `\nValor: R$ ${finalPrice.toFixed(2)}`;
