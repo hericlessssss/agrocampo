@@ -7,4 +7,8 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  server: {
+    // Configura o Vite para lidar com rotas do client-side
+    historyApiFallback: true,
+  },
 });

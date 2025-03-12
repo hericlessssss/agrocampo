@@ -77,7 +77,9 @@ async function createServer() {
   // Configuração para produção
   if (isProduction) {
     app.use(express.static(join(__dirname, 'dist')));
-    app.get('*', (req, res) => {
+    
+    // Configura todas as rotas para retornar o index.html
+    app.get('/*', (req, res) => {
       res.sendFile(join(__dirname, 'dist', 'index.html'));
     });
   }
