@@ -188,7 +188,7 @@ export const products: Product[] = [
     description: "Fio eletroplástico para cercas elétricas.",
     price: 571.00,
     images: [
-      "https://agroline.fbitsstatic.net/img/p/tru-test-fio-eletroplastico-patriot-500m-99040/274456.jpg"
+      "https://http2.mlstatic.com/D_NQ_NP_971909-MLU75881291947_042024-O.jpg"
     ],
     categoryId: 'cabos',
     specifications: [
@@ -307,7 +307,7 @@ export const products: Product[] = [
     description: "Chave interruptora para controle de circuitos.",
     price: 81.00,
     images: [
-      "https://br.speedrite.com/sites/default/files/chave-interruptora.png"
+      "https://http2.mlstatic.com/D_NQ_NP_601132-MLB50680073816_072022-O.webp"
     ],
     categoryId: 'acessorios',
     stock: 50,
@@ -424,7 +424,7 @@ export const products: Product[] = [
     description: "Chave para operação de catracas redondas.",
     price: 68.50,
     images: [
-      "https://cdn.awsli.com.br/2500x2500/1845/1845490/produto/149758666b476dc12c9.jpg"
+      "https://br.speedrite.com/sites/default/files/chave-para-catracada-redonda-de-aluminio.jpg"
     ],
     categoryId: 'acessorios',
     stock: 35,
