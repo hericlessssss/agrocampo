@@ -612,5 +612,229 @@ export const products: Product[] = [
     stock: 90,
     rating: 4.6,
     sku: "TUBO-PVC-FLUXO-CONTINUO"
+  },
+  {
+  id: "botina-br-bordada",
+  sku: "BOTINA-BR-BORDADA",
+  name: "Botina BR Bordada",
+  description: "Botina masculina bordada, couro nobuck, solado de borracha, com puxador para calçar.",
+  price: 174,
+  images: [
+    "https://calcadosbeiralago.com.br/loja/wp-content/uploads/2020/09/059-marinho-9-768x768.jpg"
+  ],
+  categoryId: "calcados",
+  stock: 5,
+  rating: 5,
+  sizes: [
+    "38",
+    "39",
+    "40",
+    "41"
+  ]
+},
+ 
+{
+  id: "botina-confort",
+  sku: "BOTINA-CONFORT",
+  name: "Botina Confort",
+  description: "Botina confort forrada em couro, solado borracha gel no couro Napa",
+  price: 290,
+  images: [
+    "https://calcadosbeiralago.com.br/loja/wp-content/uploads/2020/08/058-texas-brown-7-768x768.jpg",
+    "https://calcadosbeiralago.com.br/loja/wp-content/uploads/2020/08/058-camel-envelhecido-12.jpg"
+  ],
+  categoryId: "calcados",
+  stock: 5,
+  rating: 5,
+  sizes: [
+    "38",
+    "39",
+    "40",
+    "41",
+    "42"
+  ]
+},
+ 
+{
+  id: "coturno-injetado-agro",
+  sku: "COTURNO-INJETADO-AGRO",
+  name: "Coturno Injetado Agro",
+  description: "Coturno em couro Nobuck com solado PU Poliéter",
+  price: 222,
+  images: [
+    "https://calcadosbeiralago.com.br/loja/wp-content/uploads/2020/08/760-chumbo-4-768x768.jpg"
+  ],
+  categoryId: "calcados",
+  stock: 10,
+  rating: 5,
+  sizes: [
+    "38",
+    "39",
+    "40",
+    "41",
+    "42"
+  ]
+},
+ 
+{
+  id: "texana-masculina-sanfonada",
+  sku: "TEXANA-MASCULINA-SANFONADA",
+  name: "Texana Masculina Sanfonada",
+  description: "Texana masculina sanfonada, couro napa/nobuck, solado de borracha e palmilha de PU",
+  price: 227,
+  images: [
+    "https://calcadosbeiralago.com.br/wp-content/uploads/2024/12/DSCF6817-scaled.jpg"
+  ],
+  categoryId: "calcados",
+  stock: 5,
+  rating: 5,
+  sizes: [
+    "38",
+    "39",
+    "40",
+    "41",
+    "42"
+  ]
+},
+ 
+{
+  id: "botina-injetada-agro",
+  sku: "BOTINA-INJETADA-AGRO",
+  name: "Botina Injetada Agro",
+  description: "Botina em couro Nobuck, com solado PU Poliéter",
+  price: 205,
+  images: [
+    "https://calcadosbeiralago.com.br/loja/wp-content/uploads/2023/10/755-camel-11-768x768.jpg"
+  ],
+  categoryId: "calcados",
+  stock: 5,
+  rating: 5,
+  sizes: [
+    "38",
+    "39",
+    "40",
+    "41",
+    "42"
+  ]
+},
+ 
+{
+  id: "botina-latex-ziper",
+  sku: "BOTINA-LATEX-ZIPER",
+  name: "Botina Látex Zíper",
+  description: "Botina com couro nobuck e napa, solado de látex e zíper",
+  price: 192,
+  images: [
+    "https://calcadosbeiralago.com.br/loja/wp-content/uploads/2025/01/073-graxo-chocolate-6-768x512.jpg"
+  ],
+  categoryId: "calcados",
+  stock: 10,
+  rating: 5,
+  sizes: [
+    "38",
+    "39",
+    "40",
+    "41",
+    "42"
+  ]
+  },
+  {
+  id: "coturno-top-injetado",
+  sku: "COTURNO-TOP-INJETADO",
+  name: "Coturno Top Injetado",
+  description: "Coturno injetado em bi densidade PU Poliéter, couro nobuck e napa",
+  price: 214,
+  images: [
+    "https://calcadosbeiralago.com.br/wp-content/uploads/2023/03/767-camel-envelhecido-4-1.jpg"
+  ],
+  categoryId: "calcados",
+  stock: 15,
+  rating: 5,
+  sizes: [
+    "38",
+    "39",
+    "40",
+    "41"
+  ]
+},
+ 
+{
+  id: "bota-texana-feminina",
+  sku: "BOTA-TEXANA-FEMININA",
+  name: "Bota texana feminina",
+  description: "Bota Texana confeccionada em couro legítimo, solado em borracha resistente, palmilha anatômica com forro interno em tecido respirável, cano bordado com acabamento reforçado e bico quadrado. Ideal para uso diário ou atividades no campo com estilo e conforto",
+  price: 188,
+  images: [
+    "https://calcadosbeiralago.com.br/loja/wp-content/uploads/2021/02/921-castor-10-768x768.jpg"
+  ],
+  categoryId: "calcados",
+  stock: 15,
+  rating: 5,
+  sizes: [
+    "38",
+    "39",
+    "41"
+  ]
+},
+ 
+{
+  id: "bota-confort-ziper",
+  sku: "BOTA-CONFORT-ZIPER",
+  name: "Bota Confort Zíper",
+  description: "Bota linha confort, com zíper, em couro napa e nobuck, solado de borracha e palmilha de PU",
+  price: 216,
+  images: [
+    "https://calcadosbeiralago.com.br/loja/wp-content/uploads/2025/01/509-camel-6-768x512.jpg"
+  ],
+  categoryId: "calcados",
+  stock: 8,
+  rating: 5,
+  sizes: [
+    "39",
+    "40",
+    "41",
+    "42"
+  ]
+  },
+  {
+  id: "botina-nobuck",
+  sku: "BOTINA-NOBUCK",
+  name: "Botina Nobuck",
+  description: "Botina de Montaria Murielli, em couro Legítimo",
+  price: 148,
+  images: [
+    "https://down-br.img.susercontent.com/file/br-11134207-7qukw-lf706uxcxmnff6.webp"
+  ],
+  categoryId: "calcados",
+  stock: 22,
+  rating: 5,
+  sizes: [
+    "38",
+    "39",
+    "40",
+    "41",
+    "42"
+  ]
+},
+ 
+{
+  id: "botina-vaquejada-pluma",
+  sku: "BOTINA-VAQUEJADA-PLUMA",
+  name: "Botina Vaquejada Pluma",
+  description: "Bota botina Pluma Botina Unissex Vaquejada , rodeio, vaquejada, cavalgada, agro, campo.",
+  price: 148,
+  images: [
+    "https://m.media-amazon.com/images/I/61wfMBT1njL._AC_SY695_.jpg",
+    "https://m.media-amazon.com/images/I/51zukGhZsHL._AC_SY695_.jpg"
+  ],
+  categoryId: "calcados",
+  stock: 2,
+  rating: 5,
+  sizes: [
+    "39",
+    "40",
+    "41",
+    "42"
+  ]
   }
 ];

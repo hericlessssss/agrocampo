@@ -53,7 +53,7 @@ export const categories: ProductCategory[] = [
   // Categorias de vestuário com ícones 100% existentes
   {
     id: 'calcados',
-    name: 'Calçados Rurais',
+    name: 'Calçados',
     icon: Footprints,
     description: 'Botas e calçados resistentes para o campo'
   },
