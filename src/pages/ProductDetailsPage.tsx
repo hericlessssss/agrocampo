@@ -7,7 +7,6 @@ import RelatedProducts from '../components/products/RelatedProducts';
 import ShippingCalculator from '../components/shipping/ShippingCalculator';
 import ImageGallery from '../components/products/ImageGallery';
 
-// Importação dos estilos do Swiper
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
@@ -23,6 +22,7 @@ const ProductDetailsPage = () => {
   const navigate = useNavigate();
   const [cep, setCep] = useState('');
   const [shippingOptions, setShippingOptions] = useState<ShippingOption[]>([]);
+  const [selectedSize, setSelectedSize] = useState<string | null>(null);
 
   const product = products.find((p) => p.name === decodeURIComponent(id || ''));
   const category = product ? categories.find((cat) => cat.id === product.categoryId) : null;
@@ -46,24 +46,30 @@ const ProductDetailsPage = () => {
   const handleWhatsAppClick = () => {
     if (!product) return;
 
-    // Usar window.location.origin para obter a URL base correta
-    const productUrl = `${window.location.origin}/product/${encodeURIComponent(product.name)}`;
-    let message = `Olá! Gostaria de saber mais sobre o produto:\n\n*${product.name}*\n`;
-    
-    if (selectedVariant) {
-      message += `Modelo: ${selectedVariant.name}\n`;
+    if (product.sizes && product.sizes.length > 0 && !selectedSize) {
+      alert('Por favor, selecione um tamanho antes de continuar.');
+      return;
     }
 
-    message += `Valor: R$ ${finalPrice.toFixed(2)}\n`;
+    const productUrl = `${window.location.origin}/product/${encodeURIComponent(product.name)}`;
+    let message = `Olá! Gostaria de saber mais sobre o produto:\n\n*${product.name}*`;
+
+    if (selectedSize) {
+      message += `\nTamanho: ${selectedSize}`;
+    } else if (selectedVariant) {
+      message += `\nModelo: ${selectedVariant.name}`;
+    }
+
+    message += `\nValor: R$ ${finalPrice.toFixed(2)}`;
 
     if (cep && shippingOptions.length > 0) {
-      message += `\nCotação de frete para o CEP ${cep}:\n`;
+      message += `\n\nCotação de frete para o CEP ${cep}:\n`;
       shippingOptions.forEach((option) => {
         message += `${option.service}: R$ ${option.price.toFixed(2)} (${option.deadline} dias úteis)\n`;
       });
     }
 
-    message += `\nLink do produto: ${productUrl}`;
+    message += `\n\nLink do produto: ${productUrl}`;
 
     window.open(
       `https://wa.me/5589999731221?text=${encodeURIComponent(message)}`,
@@ -139,6 +145,28 @@ const ProductDetailsPage = () => {
             </div>
           )}
 
+          {/* Seletor de Tamanho */}
+          {product.sizes && product.sizes.length > 0 && (
+            <div>
+              <p className="text-sm font-medium text-gray-700 mb-2">Selecione o tamanho:</p>
+              <div className="flex flex-wrap gap-2">
+                {product.sizes.map((size, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedSize(size)}
+                    className={`px-4 py-2 rounded-md border text-sm ${
+                      selectedSize === size
+                        ? 'bg-green-700 text-white border-green-700'
+                        : 'bg-white text-gray-700 border-gray-300'
+                    } transition-all`}
+                  >
+                    {size}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Avaliação */}
           <div className="flex items-center gap-2">
             <div className="flex">
@@ -152,7 +180,7 @@ const ProductDetailsPage = () => {
           {/* Descrição */}
           <p className="text-xl text-gray-600">{product.description}</p>
 
-          {/* Preços */}
+          {/* Preço */}
           <div className="space-y-2">
             <p className="text-gray-500 line-through text-xl">R$ {displayPrice.toFixed(2)}</p>
             <p className="text-3xl font-bold text-secondary">
@@ -174,7 +202,7 @@ const ProductDetailsPage = () => {
             </ul>
           </div>
 
-          {/* Calculadora de Frete */}
+          {/* Frete */}
           <ShippingCalculator
             weight={1}
             length={20}
@@ -184,7 +212,7 @@ const ProductDetailsPage = () => {
             onShippingCalculated={handleShippingCalculated}
           />
 
-          {/* Botão do WhatsApp */}
+          {/* Botão WhatsApp */}
           <button
             onClick={handleWhatsAppClick}
             className="w-full bg-secondary hover:bg-accent text-white py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 hover:shadow-lg"

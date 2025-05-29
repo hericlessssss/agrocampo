@@ -1,11 +1,15 @@
 import { ProductCategory } from '../types/product';
-import { 
+import {
   Zap,
   Sun,
   Cable,
   Gauge,
   Shield,
-  Wrench
+  Wrench,
+  ShoppingCart,
+  Umbrella,
+  Activity,
+  Footprints
 } from 'lucide-react';
 
 export const categories: ProductCategory[] = [
@@ -44,5 +48,31 @@ export const categories: ProductCategory[] = [
     name: 'Acessórios',
     icon: Wrench,
     description: 'Acessórios diversos para cerca elétrica'
+  },
+
+  // Categorias de vestuário com ícones 100% existentes
+  {
+    id: 'calcados',
+    name: 'Calçados Rurais',
+    icon: Footprints,
+    description: 'Botas e calçados resistentes para o campo'
+  },
+  {
+    id: 'chapeus',
+    name: 'Chapéus',
+    icon: Umbrella,
+    description: 'Chapéus para proteção solar e estilo rural'
+  },
+  {
+    id: 'vestuario',
+    name: 'Vestuário',
+    icon: Activity,
+    description: 'Camisas, jaquetas e roupas para o campo'
+  },
+  {
+    id: 'loja',
+    name: 'Loja AgroCampo',
+    icon: ShoppingCart,
+    description: 'Produtos variados da loja física AgroCampo'
   }
 ];
