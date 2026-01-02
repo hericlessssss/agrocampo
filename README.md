@@ -42,7 +42,3 @@ Para manter as cotações do CEPEA atualizadas, siga estas instruções:
 6. Após a atualização, faça o commit e deploy das alterações.
 
 > **Importante**: As cotações devem ser atualizadas diariamente para manter a relevância das informações.
-
-## 🚀 Tecnologias Utilizadas
-
-[... resto do README existente ...]
